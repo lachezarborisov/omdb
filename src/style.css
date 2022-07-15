@@ -1,0 +1,136 @@
+@import './css/_variables.css';
+@import './css/_typography.css';
+@import './css/_navbar.css';
+@import './css/_header.css';
+@import './css/_about.css';
+@import './css/_processes.css';
+@import './css/_services.css';
+@import './css/_projects.css';
+@import './css/_contact.css';
+@import './css/_footer.css';
+@import './css/_utilities.css';
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    color: var(--color-primary);
+    background-color: var(--bg-primary);
+    /* background-image: var(--bg-img); */
+    /* background-attachment: fixed; */
+    /* background-size: cover; */
+
+    transition: background-color .25s ease-out;
+    transition: color .25s ease-out;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 6rem calc(100vh - 6rem) repeat(6, min-content);
+    grid-template-columns: 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
+}
+
+.navbar {
+    grid-row: 1 / 2;
+}
+
+.header, .about, .services, .processes, .projects, .contact {
+    padding: 0 3rem;
+}
+
+.header {
+    grid-column: 2 / 10;
+    grid-row: 2 / 3;
+}
+
+.about {
+    grid-column: 2 / 10;
+    grid-row: 3 / 4;
+}
+
+.about-wrapper {
+    background-color: var(--bg-sec);
+
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+}
+
+.services {
+    grid-column: 2 / 10;
+    grid-row: 4 / 5;
+}
+
+.processes {
+    grid-column: 2 / 10;
+    grid-row: 5 / 6;
+}
+
+.processes-wrapper {
+    background-color: var(--bg-sec);
+
+    grid-column: 1 / -1;
+    grid-row: 5 / 6;
+}
+
+.projects {
+    grid-column: 2 / 10;
+    grid-row: 6 / 7;
+}
+
+.contact {
+    /* background-color: var(--bg-sec); */
+    grid-column: 2 / 10;
+    grid-row: 7 / 8;
+}
+
+.contact-wrapper {
+    background-color: var(--bg-sec);
+
+    grid-column: 1 / -1;
+    grid-row: 7 / 8;
+}
+
+.footer {
+    grid-column: 2 / 10;
+    grid-row: 8 / 9;
+}
+
+.fab {
+    font-size: 5rem;
+    margin-right: 2.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.fab:hover {
+    color: var(--on-background);
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        grid-template-rows: 6rem repeat(7, min-content);
+    }
+}
+
+/* @media screen and (max-width: 600px) {
+    .header {
+        grid-column: 1 / -1;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header {
+        grid-column: 1 / -1;
+    }
+} */
