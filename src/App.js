@@ -50,6 +50,7 @@ const App = () => {
   useEffect(() => {
     const episodesFovourite = JSON.parse(localStorage.getItem('favourite-episodes'));
     setFavourite(episodesFovourite);
+    saveToLocalStorage([]);
   }, []);
 
   const saveToLocalStorage = (items) => {
