@@ -3,12 +3,14 @@ import React from 'react';
 const EpisodesList = (props) => {
   const FavouriteComponent = props.favouriteComponent;
 
+  console.log('DEBUG props: ', props.episodes);
+
   return (
     <div className='cards-list'>
-      {props.episodes.map((episode) => (
-        <div className='card'>
+      { props ? props.episodes.map((episode) => (
+        <div className='card' key={episode.imdbID}>
           <div className='card-img'>
-            <img src={episode.Poster} key={episode.imdbID} alt="episode" />
+            <img src={episode.Poster}  alt="episode" />
           </div>
           <div className='card-info'>
             <div>
@@ -20,7 +22,7 @@ const EpisodesList = (props) => {
             </div>      
           </div>
         </div>
-      ))}
+      )) : null }
     </div>
   );
 };

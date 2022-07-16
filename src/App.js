@@ -26,8 +26,6 @@ const App = () => {
     const res = await fetch(url);
     const resJson = await res.json();
 
-    console.log('DEBUG resJson: ', resJson);
-
     if (resJson.Search) {
       const result = searchValue 
                    ? resJson.Search 
