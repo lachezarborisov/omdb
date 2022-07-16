@@ -3,12 +3,10 @@ import React from 'react';
 const EpisodesList = (props) => {
   const FavouriteComponent = props.favouriteComponent;
 
-  console.log('DEBUG props: ', props.episodes);
-
   return (
     <div className='cards-list'>
-      { props ? props.episodes.map((episode) => (
-        <div className='card' key={episode.imdbID}>
+      { props ? props.episodes.map((episode, index) => (
+        <div className='card' key={index}>
           <div className='card-img'>
             <img src={episode.Poster}  alt="episode" />
           </div>

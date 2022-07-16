@@ -38,7 +38,6 @@ const App = () => {
     if (window.innerHeight + e.target.documentElement.scrollTop >= e.target.documentElement.scrollHeight) {
       getEpisodes();
     }
-
   }
 
   useEffect(() => {
@@ -74,11 +73,20 @@ const App = () => {
       <h1>Game of Thrones</h1>
       <div>
         <Heading heading={'Favourites'} />        
-        <EpisodesList episodes={favourite} favouriteClick={removeFavouriteEpisode} favouriteComponent={RemoveFavourite} />
+        <EpisodesList 
+          episodes={favourite} 
+          favouriteClick={removeFavouriteEpisode} 
+          favouriteComponent={RemoveFavourite} 
+          fav={'fav'} />
       </div>    
       <Heading heading={'Episodes'} />
-      <Search searchValue={searchValue} setSearchValue={setSearchValue} />
-      <EpisodesList episodes={episodes} favouriteClick={addFavouriteEpisode} favouriteComponent={AddFavourite} />
+      <Search 
+        searchValue={searchValue} 
+        setSearchValue={setSearchValue} />
+      <EpisodesList 
+        episodes={episodes} 
+        favouriteClick={addFavouriteEpisode} 
+        favouriteComponent={AddFavourite} />
     </div>
   );
 };
