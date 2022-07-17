@@ -5,7 +5,7 @@ const EpisodesList = (props) => {
 
   return (
     <div className='cards-list'>
-      { props ? props.episodes.map((episode, index) => (
+      {props.episodes.map((episode, index) => (
         <div className='card' key={index}>
           <div className='card-img'>
             <img src={episode.Poster}  alt="episode" />
@@ -20,7 +20,7 @@ const EpisodesList = (props) => {
             </div>      
           </div>
         </div>
-      )) : null }
+      ))}
     </div>
   );
 };

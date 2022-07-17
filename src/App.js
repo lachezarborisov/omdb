@@ -17,7 +17,7 @@ const App = () => {
     let url = '';
 
     if(searchValue) {
-      url = `https://www.omdbapi.com/?apikey=b63274f8&s=${searchValue}`;
+      url = `https://www.omdbapi.com/?apikey=b63274f8&s=Game of Thrones ${searchValue}`;
     } else {
       url = `https://www.omdbapi.com/?apikey=b63274f8&s=Game of Thrones&page=${page}`;
       page++;
